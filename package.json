@@ -12,6 +12,12 @@
     "@mantine/core": "^7.5.1",
     "@mantine/hooks": "^7.5.1",
     "@tabler/icons-react": "^2.47.0",
+    "@zxcvbn-ts/core": "^3.0.4",
+    "@zxcvbn-ts/language-common": "^3.0.4",
+    "@zxcvbn-ts/language-en": "^3.0.2",
+    "@zxcvbn-ts/language-id": "^3.0.2",
+    "@zxcvbn-ts/matcher-pwned": "^3.0.4",
+    "dayjs": "^1.11.10",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

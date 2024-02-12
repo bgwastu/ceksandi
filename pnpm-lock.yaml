@@ -14,6 +14,24 @@ dependencies:
   '@tabler/icons-react':
     specifier: ^2.47.0
     version: 2.47.0(react@18.2.0)
+  '@zxcvbn-ts/core':
+    specifier: ^3.0.4
+    version: 3.0.4
+  '@zxcvbn-ts/language-common':
+    specifier: ^3.0.4
+    version: 3.0.4
+  '@zxcvbn-ts/language-en':
+    specifier: ^3.0.2
+    version: 3.0.2
+  '@zxcvbn-ts/language-id':
+    specifier: ^3.0.2
+    version: 3.0.2
+  '@zxcvbn-ts/matcher-pwned':
+    specifier: ^3.0.4
+    version: 3.0.4
+  dayjs:
+    specifier: ^1.11.10
+    version: 1.11.10
   next:
     specifier: 14.1.0
     version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -1077,6 +1095,30 @@ packages:
       ts-morph: 12.0.0
     dev: true
 
+  /@zxcvbn-ts/core@3.0.4:
+    resolution: {integrity: sha512-aQeiT0F09FuJaAqNrxynlAwZ2mW/1MdXakKWNmGM1Qp/VaY6CnB/GfnMS2T8gB2231Esp1/maCWd8vTG4OuShw==}
+    dependencies:
+      fastest-levenshtein: 1.0.16
+    dev: false
+
+  /@zxcvbn-ts/language-common@3.0.4:
+    resolution: {integrity: sha512-viSNNnRYtc7ULXzxrQIVUNwHAPSXRtoIwy/Tq4XQQdIknBzw4vz36lQLF6mvhMlTIlpjoN/Z1GFu/fwiAlUSsw==}
+    dev: false
+
+  /@zxcvbn-ts/language-en@3.0.2:
+    resolution: {integrity: sha512-Zp+zL+I6Un2Bj0tRXNs6VUBq3Djt+hwTwUz4dkt2qgsQz47U0/XthZ4ULrT/RxjwJRl5LwiaKOOZeOtmixHnjg==}
+    dev: false
+
+  /@zxcvbn-ts/language-id@3.0.2:
+    resolution: {integrity: sha512-jH8VBRY2tpn6/zsT71+oN1SWfcxtIzb0fCTP3GLudJ/x1azdVmqzsnwldAEF/ZgGdBiIUblP/1kjEQSgeFRdSQ==}
+    dev: false
+
+  /@zxcvbn-ts/matcher-pwned@3.0.4:
+    resolution: {integrity: sha512-7BY6/IfY0Eb9HjTQGbDPIMceiBR6jZtQTOQfA3X3XREAZZ29GQ2XAm9dwZ76wF35XOajszGoXQ+L/fYh8DpkMg==}
+    dependencies:
+      '@zxcvbn-ts/core': 3.0.4
+    dev: false
+
   /abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
     dev: true
@@ -1577,6 +1619,10 @@ packages:
   /data-uri-to-buffer@2.0.2:
     resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
     dev: true
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: false
 
   /debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -2626,6 +2672,11 @@ packages:
   /fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
     dev: true
+
+  /fastest-levenshtein@1.0.16:
+    resolution: {integrity: sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==}
+    engines: {node: '>= 4.9.1'}
+    dev: false
 
   /fastq@1.17.0:
     resolution: {integrity: sha512-zGygtijUMT7jnk3h26kUms3BkSDp4IfIKjmnqI2tvx6nuBfiF1UqOxbnLfzdv+apBy+53oaImsKtMw/xYbW+1w==}
