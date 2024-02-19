@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
 import type { Metadata } from "next";
-import themeClasses from "./theme.module.css";
+import classes from "./layout.module.css";
 
 export const metadata: Metadata = {
   title: "Cek Sandi",
@@ -28,7 +28,7 @@ export default function RootLayout({
 const theme = createTheme({
   primaryColor: "brand",
   black: "#212529",
-  activeClassName: themeClasses.active,
+  activeClassName: classes.active,
   colors: {
     brand: [
       "#eef3ff",
