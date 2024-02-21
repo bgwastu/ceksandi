@@ -1,0 +1,17 @@
+.wrapper {
+  background-color: var(--mantine-color-brand-1);
+  padding-block: rem(40);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+
+.passwordInput {
+  &:focus-within {
+    outline: rem(2px) solid var(--focus-color);
+    border-color: transparent;
+  }
+}
