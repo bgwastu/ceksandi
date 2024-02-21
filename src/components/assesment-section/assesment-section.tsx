@@ -9,6 +9,7 @@ import {
   Flex,
   List,
   ListItem,
+  Loader,
   Mark,
   PasswordInput,
   Popover,
@@ -139,11 +140,12 @@ const passwordStrengthLevels: PasswordStrengthLevel[] = [
 ];
 
 export default function AssesmentSection({ ...props }: BoxProps) {
-  const [password, setPassword] = useDebouncedState("", 50, { leading: true });
+  const [password, setPassword] = useDebouncedState("", 300, { leading: true });
   const [result, setResult] = useState<ZxcvbnResult | null>(null);
   const [ready, setReady] = useState(false);
   const [currentPasswordStrength, setCurrentPasswordStrength] =
     useState<PasswordStrengthLevel | null>(null);
+  const isLoading = password !== (result?.password ?? "");
 
   useEffect(() => {
     loadOptions().then((options) => {
@@ -199,29 +201,31 @@ export default function AssesmentSection({ ...props }: BoxProps) {
           </Title>
           <Text>Merasa kata sandi kamu sudah kuat? Yuk Buktikan!</Text>
         </Stack>
-        <form
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <PasswordInput
-            size="lg"
-            placeholder={
-              ready ? "Masukkan kata sandi kamu" : "Mohon tunggu sebentar..."
-            }
-            disabled={!ready}
-            onChange={(event) => setPassword(event.currentTarget.value)}
-            classNames={{
-              input: classes.passwordInput,
-            }}
-            style={{
-              "--focus-color": `var(--mantine-color-${
-                currentPasswordStrength?.color ?? "brand"
-              }-7)`,
-            }}
-            visibilityToggleIcon={({ reveal }) =>
-              reveal ? <IconEyeOff /> : <IconEye />
-            }
-          />
-        </form>
+        <PasswordInput
+          size="lg"
+          placeholder={
+            ready ? "Masukkan kata sandi kamu" : "Mohon tunggu sebentar..."
+          }
+          disabled={!ready}
+          onChange={(event) => setPassword(event.currentTarget.value)}
+          classNames={{
+            input: classes.passwordInput,
+          }}
+          style={{
+            "--focus-color": `var(--mantine-color-${
+              currentPasswordStrength?.color ?? "brand"
+            }-7)`,
+          }}
+          visibilityToggleIcon={({ reveal }) =>
+            isLoading ? (
+              <Loader size="xs" />
+            ) : reveal ? (
+              <IconEyeOff />
+            ) : (
+              <IconEye />
+            )
+          }
+        />
         <Stack gap="md">
           {currentPasswordStrength ? (
             <>
