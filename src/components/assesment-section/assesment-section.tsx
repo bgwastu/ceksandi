@@ -199,7 +199,9 @@ export default function AssesmentSection({ ...props }: BoxProps) {
           </Title>
           <Text>Merasa kata sandi kamu sudah kuat? Yuk Buktikan!</Text>
         </Stack>
-        <form>
+        <form
+          onSubmit={(e) => e.preventDefault()}
+        >
           <PasswordInput
             size="lg"
             placeholder={
