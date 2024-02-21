@@ -9,9 +9,9 @@
     },
     {
       "name": "Next.js: debug client-side",
-      "type": "msedge",
+      "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:3000"
+      "url": "http://localhost:3000",
     },
     {
       "name": "Next.js: debug full stack",
@@ -21,8 +21,8 @@
       "serverReadyAction": {
         "pattern": "- Local:.+(https?://.+)",
         "uriFormat": "%s",
-        "action": "debugWithEdge"
+        "action": "debugWithChrome"
       }
-    }
+    },
   ]
 }
