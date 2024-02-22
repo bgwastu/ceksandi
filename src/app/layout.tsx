@@ -2,6 +2,8 @@ import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
 import type { Metadata } from "next";
 import classes from "./layout.module.css";
+import { HeaderMenu } from "@/components/header-menu/header-menu";
+import { FooterSection } from "@/components/footer-section/footer-section";
 
 export const metadata: Metadata = {
   title: "Cek Sandi",
@@ -17,9 +19,14 @@ export default function RootLayout({
     <html lang="id">
       <head>
         <ColorSchemeScript />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <HeaderMenu />
+          {children}
+          <FooterSection />
+        </MantineProvider>
       </body>
     </html>
   );
