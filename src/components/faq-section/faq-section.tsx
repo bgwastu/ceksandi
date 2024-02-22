@@ -5,10 +5,9 @@ import {
   Anchor,
   Box,
   Container,
-  List,
   Stack,
   Text,
-  Title,
+  Title
 } from "@mantine/core";
 import classes from "./faq-section.module.css";
 
@@ -30,15 +29,15 @@ const faq = [
           untuk mengetahui seberapa rumit kata sandi untuk ditebak.
         </Text>
         <Text>Kata sandi akan dinilai berdasarkan:</Text>
-        <List withPadding>
-          <List.Item>
+        <ul>
+          <li>
             <Text fw={600} span>
               Waktu untuk dipecahkan:
             </Text>{" "}
             Berapa lama waktu yang dibutuhkan bagi hacker untuk memecahkan kata
             sandi menggunakan bot komputer.
-          </List.Item>
-          <List.Item>
+          </li>
+          <li>
             <Text fw={600} span>
               Kekuatan kata sandi:
             </Text>
@@ -54,8 +53,8 @@ const faq = [
               ejaan l33t
             </Anchor>
             .
-          </List.Item>
-          <List.Item>
+          </li>
+          <li>
             <Text fw={600} span>
               Paparan terhadap kebocoran data:
             </Text>{" "}
@@ -68,8 +67,8 @@ const faq = [
               HIBP
             </Anchor>
             .
-          </List.Item>
-        </List>
+          </li>
+        </ul>
       </Stack>
     ),
   },
@@ -110,8 +109,8 @@ const faq = [
           >
             zxcvbn
           </Anchor>{" "}
-          untuk mengimplementasikan algoritma ini di aplikasi yang sedang kamu kembangkan. zxcvbn
-          tersedia dalam berbagai bahasa pemrograman.
+          untuk mengimplementasikan algoritma ini di aplikasi yang sedang kamu
+          kembangkan. zxcvbn tersedia dalam berbagai bahasa pemrograman.
         </Text>
         <Text>
           Jika kamu menggunakan TypeScript, kamu bisa menggunakan{" "}
