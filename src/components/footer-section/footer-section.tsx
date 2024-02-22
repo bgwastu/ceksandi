@@ -1,18 +1,15 @@
 "use client";
 
 import { ActionIcon, Anchor, Container, Group, Text, rem } from "@mantine/core";
-import {
-  IconBrandGithub,
-  IconMail
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconMail } from "@tabler/icons-react";
+import Link from "next/link";
 import Logo from "../logo/logo";
 import classes from "./footer-section.module.css";
-import Link from "next/link";
 
 export function FooterSection() {
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <Container>
         <div className={classes.logo}>
           <Logo size={20} />
           <Text size="xs" c="dimmed" className={classes.description}>
