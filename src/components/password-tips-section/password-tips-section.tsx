@@ -22,6 +22,7 @@ const passwordTips = [
       </Text>
     ),
     icon: <IconLock />,
+    color: "brand",
   },
   {
     title: "Personal dan Rahasia",
@@ -29,19 +30,21 @@ const passwordTips = [
       <Text>Hanya kamu yang boleh mengetahui kata sandimu sendiri.</Text>
     ),
     icon: <IconSpy />,
+    color: "brand"
   },
   {
     title: "Sekali Pakai",
     description: (
       <Text>
         Setiap akun online harus memiliki kata sandi yang berbeda-beda. Gunakan{" "}
-        <Anchor href="#" underline="always" inherit>
+        <Anchor href="#" underline="always">
           password manager
         </Anchor>{" "}
         agar tidak lupa.
       </Text>
     ),
     icon: <IconUserCheck />,
+    color: "brand"
   },
 ];
 
@@ -49,9 +52,9 @@ export default function PasswordTipsSection() {
   return (
     <Box my={rem(40)} size="md">
       <Container>
-        <Stack>
-          <Title ta="center" c="brand.9">
-            3 Sifat Kata Sandi Kuat
+        <Stack gap="xl">
+          <Title ta="center" c="">
+            Sifat Kata Sandi Kuat
           </Title>
           <SimpleGrid
             cols={{
@@ -63,16 +66,16 @@ export default function PasswordTipsSection() {
               <Paper
                 key={index}
                 p="lg"
-                bg="brand.1"
+                bg={`${tip.color}.0`}
                 mih={200}
                 style={{
-                  border: "2px solid var(--mantine-color-brand-9)",
+                  border: `1.2px solid var(--mantine-color-${tip.color}-9)`,
                 }}
               >
-                <ThemeIcon size="xl" mb="sm" variant="filled">
+                <ThemeIcon size="xl" mb="sm" color={`${tip.color}.5`} variant="outline">
                   {tip.icon}
                 </ThemeIcon>
-                <Title order={3}>{tip.title}</Title>
+                <Title order={3} c={`${tip.color}.8`}>{tip.title}</Title>
                 {tip.description}
               </Paper>
             ))}
