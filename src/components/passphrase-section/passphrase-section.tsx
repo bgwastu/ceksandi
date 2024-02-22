@@ -11,13 +11,9 @@ import {
   Text,
   ThemeIcon,
   Title,
-  rem
+  rem,
 } from "@mantine/core";
-import {
-  IconAsterisk,
-  IconCheck,
-  IconX
-} from "@tabler/icons-react";
+import { IconAsterisk, IconCheck, IconX } from "@tabler/icons-react";
 
 export default function PassphraseSection() {
   return (
@@ -63,9 +59,13 @@ export default function PassphraseSection() {
           <Title order={2} c="brand.9">
             Kata sandi yang tidak aman
           </Title>
-          <Text>
+          <Text lh={1.6}>
             Sebenarnya{" "}
-            <Anchor href="" underline="always">
+            <Anchor
+              href="https://en.m.wikipedia.org/wiki/Password_strength#Examples_of_weak_passwords"
+              underline="always"
+              target="_blank"
+            >
               ada banyak hal yang membuat kata sandi menjadi tidak aman
             </Anchor>
             , tetapi intinya jangan memasukkan data personal seperti{" "}
@@ -81,7 +81,7 @@ export default function PassphraseSection() {
             withPadding
             spacing="xs"
             icon={
-              <ThemeIcon color="red" size={24} radius="xl">
+              <ThemeIcon color="brand.4" size={24} radius="xl">
                 <IconX style={{ width: rem(16), height: rem(16) }} />
               </ThemeIcon>
             }

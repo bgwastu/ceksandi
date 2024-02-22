@@ -72,7 +72,7 @@ export default function PasswordTipsSection() {
                   border: `1.2px solid var(--mantine-color-${tip.color}-9)`,
                 }}
               >
-                <ThemeIcon size="xl" mb="sm" color={`${tip.color}.5`} variant="outline">
+                <ThemeIcon size="xl" mb="sm" color={`${tip.color}.5`} >
                   {tip.icon}
                 </ThemeIcon>
                 <Title order={3} c={`${tip.color}.8`}>{tip.title}</Title>

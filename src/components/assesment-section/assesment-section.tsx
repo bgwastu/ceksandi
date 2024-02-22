@@ -249,8 +249,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                         {currentPasswordStrength.label}
                       </Text>
                       <ThemeIcon
-                        radius="xl"
-                        size={22}
+                          size={22}
                         variant="transparent"
                         c={currentPasswordStrength.color + ".7"}
                       >
@@ -269,6 +268,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
               <Progress
                 w="250px"
                 bg="white"
+                radius="xs"
                 value={(currentPasswordStrength.level + 1) * 20}
                 color={currentPasswordStrength.color + ".7"}
               />
@@ -278,10 +278,9 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                     <ThemeIcon
                       color={currentPasswordStrength.color + ".7"}
                       size={28}
-                      radius="xl"
                     >
                       <IconCalendarTime
-                        style={{ width: rem(16), height: rem(16) }}
+                        style={{ width: "70%", height: "70%" }}
                       />
                     </ThemeIcon>
                   }
@@ -315,10 +314,9 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                       <ThemeIcon
                         color={currentPasswordStrength.color + ".7"}
                         size={28}
-                        radius="xl"
-                      >
+                        >
                         <IconAlertTriangle
-                          style={{ width: rem(16), height: rem(16) }}
+                          style={{ width: "70%", height: "70%" }}
                         />
                       </ThemeIcon>
                     }
@@ -331,16 +329,15 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                   icon={
                     <ThemeIcon
                       size={28}
-                      radius="xl"
                       color={currentPasswordStrength.color + ".7"}
                     >
                       {result?.feedback.warning === "pwned" ? (
                         <IconDatabaseLeak
-                          style={{ width: rem(16), height: rem(16) }}
+                          style={{ width: "70%", height: "70%" }}
                         />
                       ) : (
                         <IconCheck
-                          style={{ width: rem(16), height: rem(16) }}
+                          style={{ width: "70%", height: "70%" }}
                         />
                       )}
                     </ThemeIcon>
@@ -379,7 +376,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
           ) : (
             <Flex gap={8} align="center">
               <ThemeIcon size={22} radius="xl">
-                <IconLock style={{ width: rem(16), height: rem(16) }} />
+                <IconLock style={{ width: "70%", height: "70%" }} />
               </ThemeIcon>
               <Text size="sm">
                 Kata sandi yang dimasukkan{" "}
