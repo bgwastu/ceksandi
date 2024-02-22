@@ -320,7 +320,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                       </ThemeIcon>
                     }
                   >
-                    Kata sandi mirip dengan kata biasa digunakan oleh banyak
+                    Kata sandi mirip dengan yang biasa digunakan oleh banyak
                     orang
                   </ListItem>
                 ) : null}
