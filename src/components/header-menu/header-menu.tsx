@@ -6,21 +6,21 @@ import {
   Divider,
   Drawer,
   Group,
-  Stack
+  Stack,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
   IconChevronRight,
   IconExternalLink,
-  IconMenu2
+  IconMenu2,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import Logo from "../logo/logo";
 import classes from "./header-menu.module.css";
 
 const links = [
-  { link: "#faq", label: "FAQ" },
-  { link: "#tentang", label: "Tentang" },
+  { link: "/#faq", label: "FAQ" },
+  { link: "/about", label: "Tentang" },
   { link: "https://github.com/bgwastu/ceksandi", label: "Kode Sumber" },
 ];
 

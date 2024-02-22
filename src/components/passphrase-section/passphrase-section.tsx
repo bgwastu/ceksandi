@@ -17,7 +17,7 @@ import { IconAsterisk, IconCheck, IconX } from "@tabler/icons-react";
 
 export default function PassphraseSection() {
   return (
-    <Box bg="brand.1" py={rem(40)}>
+    <Box bg="brand.1" py={rem(40)} id="passphrase">
       <Container>
         <Stack maw={700}>
           <Box>

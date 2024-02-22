@@ -18,8 +18,7 @@ import {
   Text,
   ThemeIcon,
   Title,
-  Tooltip,
-  rem,
+  Tooltip
 } from "@mantine/core";
 import { useDebouncedState } from "@mantine/hooks";
 import {
@@ -79,7 +78,7 @@ const passwordStrengthLevels: PasswordStrengthLevel[] = [
         Kata sandi ini sangat mudah ditebak dan tidak aman.
         <br />
         <br />
-        <Anchor inherit component={Link} underline="always" href="#">
+        <Anchor inherit component={Link} underline="always" href="#passphrase">
           Lihat cara membuat kata sandi yang kuat
         </Anchor>
       </Text>
@@ -94,7 +93,7 @@ const passwordStrengthLevels: PasswordStrengthLevel[] = [
         Kata sandi ini masih mudah ditebak.
         <br />
         <br />
-        <Anchor inherit component={Link} underline="always" href="#">
+        <Anchor inherit component={Link} underline="always" href="#passphrase">
           Lihat cara membuat kata sandi yang kuat
         </Anchor>
       </Text>
@@ -109,7 +108,7 @@ const passwordStrengthLevels: PasswordStrengthLevel[] = [
         Kata sandi ini sudah cukup kuat, tapi masih bisa diperkuat.
         <br />
         <br />
-        <Anchor inherit component={Link} underline="always" href="#">
+        <Anchor inherit component={Link} underline="always" href="#passphrase">
           Lihat cara membuat kata sandi yang kuat
         </Anchor>
       </Text>
@@ -249,7 +248,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                         {currentPasswordStrength.label}
                       </Text>
                       <ThemeIcon
-                          size={22}
+                        size={22}
                         variant="transparent"
                         c={currentPasswordStrength.color + ".7"}
                       >
@@ -314,7 +313,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                       <ThemeIcon
                         color={currentPasswordStrength.color + ".7"}
                         size={28}
-                        >
+                      >
                         <IconAlertTriangle
                           style={{ width: "70%", height: "70%" }}
                         />
@@ -336,9 +335,7 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                           style={{ width: "70%", height: "70%" }}
                         />
                       ) : (
-                        <IconCheck
-                          style={{ width: "70%", height: "70%" }}
-                        />
+                        <IconCheck style={{ width: "70%", height: "70%" }} />
                       )}
                     </ThemeIcon>
                   }
@@ -384,7 +381,11 @@ export default function AssesmentSection({ ...props }: BoxProps) {
                   tidak akan disimpan
                 </Text>
                 .{" "}
-                <Anchor href="#:~:text=FAQ" underline="always" inherit>
+                <Anchor
+                  href="#:~:text=Bagaimana cara pengecekan dilakukan?"
+                  underline="always"
+                  inherit
+                >
                   Lihat cara kerja web ini
                 </Anchor>
               </Text>
