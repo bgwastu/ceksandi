@@ -120,7 +120,7 @@ const passwordStrengthLevels: PasswordStrengthLevel[] = [
     color: "green",
     explanation: (
       <Text>
-        Kata sandi ini sudah kuat, tapi selalu review dan perbarui kata sandi
+        Kata sandi ini sudah kuat. Selalu review dan perbarui kata sandi
         secara berkala.
       </Text>
     ),
