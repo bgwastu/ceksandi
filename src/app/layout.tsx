@@ -6,6 +6,9 @@ import { HeaderMenu } from "@/components/header-menu/header-menu";
 import { FooterSection } from "@/components/footer-section/footer-section";
 
 export const metadata: Metadata = {
+  metadataBase: process.env.CF_PAGES_URL
+    ? new URL(process.env.CF_PAGES_URL)
+    : null,
   title: "Cek Sandi",
   description: "Website untuk mengecek kekuatan kata sandi dengan lengkap.",
 };
